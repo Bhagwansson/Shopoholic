@@ -19,7 +19,7 @@ connectDatabase();
 
 //creating server
 
-const server = app.listen(process.env.PORT,"192.168.0.103",() => {
+const server = app.listen(process.env.PORT,() => {
   //   console.log(process.env.PORT)
   console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
