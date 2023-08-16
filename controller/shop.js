@@ -13,7 +13,7 @@ const { isSeller } = require("../middleware/auth");
 
 
 // create shop
-router.post("/create-shop", upload.single("file"), async (res, res, next) => {
+router.post("/create-shop", upload.single("file"), async (req, res, next) => {
   try {
     const { email } = req.body;
     const sellerEmail = await Shop.findOne({ email });

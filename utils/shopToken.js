@@ -16,4 +16,4 @@ const sendShopToken = (user, statusCode, res) => {
   };
   
   
-  module.exports = sendToken
+  module.exports = sendShopToken
