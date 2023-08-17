@@ -162,7 +162,6 @@ router.get(
 // logout user
 router.get(
   "/logout",
-  isAuthenticated,
   catchAsyncErrors(async (req, res, next) => {
     try {
       res.cookie("token", null, {
