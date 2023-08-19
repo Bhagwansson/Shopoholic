@@ -13,6 +13,7 @@ const sendShopToken = (user, statusCode, res) => {
       user,
       token,
     });
+    // console.log(token)
   };
   
   

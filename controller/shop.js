@@ -152,6 +152,7 @@ router.get(
     catchAsyncErrors(async (req, res, next) => {
       try {
         const seller = await Shop.findById(req.seller._id);
+        // console.log('seller', seller )
   
         if (!seller) {
           return next(new ErrorHandler("User doesn't exist", 400));
@@ -162,7 +163,9 @@ router.get(
           seller,
         });
       } catch (error) {
+        // console.log(error)
         return next(new ErrorHandler(error.message, 500));
+        
       }
     })
   );
