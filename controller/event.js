@@ -37,6 +37,22 @@ router.post(
   })
 );
 
+// get all events
+router.get(
+  "/get-all-events",
+  catchAsyncErrors(async (req, res, next) => {
+    try {
+      const events = await Event.find();
+      res.status(200).json({
+        success: true,
+        events,
+      });
+    } catch (error) {
+      return next(new ErrorHandler(error, 400));
+    }
+  })
+);
+
 // get all events from a shop
 router.get(
   "/get-all-events/:id",
